@@ -11,9 +11,9 @@ const LoginPage = () => {
     }
 
     return (
-        <div id="login" className="d-flex p-4 justify-content-center align-content-center align-self-center align-items-center">
-            <h3 className="text-white">Login</h3>
-            <form onSubmit={handleSubmit} className="form-login border-primary w-100 p-4 rounded-3">
+        <div id="login" className="d-flex p-4 justify-content-center align-content-center align-self-center align-items-center fw-bold">
+            <h3 className="text-white">Login Sinduscon</h3>
+            <form onSubmit={handleSubmit} className="form-login border-success w-100 p-4 rounded-3">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label d-block">E-mail : </label>
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" class="form-control border-primary W-100" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -26,8 +26,14 @@ const LoginPage = () => {
                         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" id="inputPassword6" class="form-control border-primary W-100" aria-describedby="passwordHelpInline" />
                     </div>
                 </div>
-                <div className="text-center p-3">
-                    <button type="submit" class="action-login btn btn-primary">Entrar</button>
+                <div className="text-center pt-3">
+                    <button type="submit" class="action-login btn btn-outline-success fw-bold">Entrar</button>
+                </div> 
+                <div className='text-center'>
+                    <span>ou</span>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline-primary fw-bold">Cadastre-se aqui</button>
                 </div>
             </form>
         </div>

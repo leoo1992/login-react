@@ -59,6 +59,10 @@ jobs:
           cache: npm
       - name: Install locked dependencies
         run: npm ci --no-audit --no-fund
+      - name: Run application tests
+        env:
+          CI: 'true'
+        run: npm test -- --watchAll=false
       - name: Build application
         env:
           CI: 'true'
